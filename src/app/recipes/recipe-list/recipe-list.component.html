@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success">New Recipe</button>
+  </div>
+</div>
+<hr />
+<div class="row">
+  <div class="col-xs-12">
+    <!-- use ngFor to loop the data by call the recipes in the recipe-item component -->
+    <!-- [recipe] property comes from the recipe at the recipe item component -->
+    <!-- recipeSelected get from the recipe item -->
+    <recipe-item
+      *ngFor="let recipeEl of recipes"
+      [recipe]="recipeEl"
+    ></recipe-item>
+    <!-- it was use before using recipe service and placed in recipe-item**(recipeSelected)="onRecipeSelected(recipeEl)" -->
+  </div>
+</div>
